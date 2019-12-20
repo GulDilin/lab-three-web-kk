@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+    text-align: center;
+    font-family: 'Share Tech Mono', monospace;
+}
+
+body {
+    background: linear-gradient(-45deg, #D2691E, #008080, #A52A2A   , #191970);
+    background-size: 300% 300%;
+    color: white;
+    width: 100vw;
+    display: flex;
+    overflow-x: hidden;
+    flex-direction: column;
+    font-size: 11pt;
+}
+
+#clock {
+    text-align: left;
+    color: #2B2A2A;
+    margin: 0 auto;
+    font-size: 10vh;
+}
+
+body, html, p, #footer, div {
+    width: 100%;
+    text-align: center;
+}
+
+#header {
+    align-self: flex-start;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    font-size: 200%;
+    text-align: center;
+}
+
+#header > span {
+    padding: 1%;
+    font-style: italic;
+}
+
+#content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    min-height: 100vh;
+}
+
+.plot {
+    display: flex;
+    width: 300px;
+    height: 300px;
+    margin: 1% auto;
+    padding: 2%;
+    border: 2px solid black;
+    border-radius: 10px;
+
+}
+
+svg {
+    margin: auto auto;
+    display: block;
+    text-align: right;
+    stroke: white;
+    fill:white;
+}
+svg line{
+    stroke: white;
+}
+svg rect, polygon, path {
+    fill: white;
+    stroke: white;
+    transition-duration: 0.4s;
+}
+
+svg rect:hover, polygon:hover, path:hover {
+    fill: darksalmon;
+    transition-duration: 0.4s;
+}
+
+svg circle {
+    transition-duration: 0.6s;
+
+}
+
+tbody {
+    min-width: 300px;
+    min-height: 300px;
+    width: 15vh;
+}
+
+/*tr {*/
+    /*height: 15vh;*/
+    /*min-height: 50px;*/
+/*}*/
+
+/*td {*/
+    /*min-width: 15vh;*/
+    /*min-height: 50px;*/
+/*}*/
+
+table {
+    background-color: #a495ff;
+}

@@ -1,0 +1,8 @@
+<<<<<<< HEAD
+out/*
+*.war
+out/artifacts/lab_three_war/lab-three_war.war
+=======
+/out/
+>>>>>>> upstream/master
+out/artifacts/lab_three_war/lab-three_war.war

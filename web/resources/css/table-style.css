@@ -1,0 +1,20 @@
+.table-container, #res-table{
+	width: 100%;
+	padding: 10px;
+}
+.res-table {
+	width: 100%;
+	background: none;
+	line-height: 2;
+	text-transform: uppercase;
+	text-align: center;
+	font-weight: bold;
+	margin: 20px auto;
+}
+.res-table caption {
+	background: #14282b;
+}
+.res-table th {
+	width: 0.5%;
+	background: #c996a2;
+}

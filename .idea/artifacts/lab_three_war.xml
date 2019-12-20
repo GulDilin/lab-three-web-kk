@@ -1,0 +1,17 @@
+<component name="ArtifactManager">
+  <artifact type="war" build-on-make="true" name="lab-three:war">
+    <output-path>$PROJECT_DIR$/out/artifacts/lab_three_war</output-path>
+    <root id="archive" name="lab-three_war.war">
+      <element id="artifact" artifact-name="lab-three:war exploded" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="jstl-1.1.0" />
+          <element id="library" level="project" name="javax.faces-2.2.1" />
+          <element id="library" level="project" name="jsch-0.1.55" />
+          <element id="library" level="project" name="postgresql-42.2.5" />
+          <element id="library" level="project" name="primefaces-6.0" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

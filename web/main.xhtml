@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<h:body>
+    <ui:composition template="template/templLayout.xhtml">
+
+        <ui:define name="content">
+            <ui:include src="template/plot.xhtml"/>
+
+            <h:form id="form" prependId="false">
+                <div>
+                    <div class="form-label"><h:outputLabel>X VALUE:</h:outputLabel></div>
+                    <h:inputText onchange="valid(this)" prependId="false" required="true" maxlength="8" id="x"
+                                 value="#{controller.x}"/>
+                    <div>
+                        <label id="error-message"/>
+                        <br/>
+                        <label id="error-message-R"/>
+                        <br/>
+                    </div>
+                    <h:inputText prependId="false" required="true" maxlength="8" id="r" readonly="true"
+                                 value="#{controller.r}"/>
+                    <p:commandLink update="res-table,r" action="#{controller.setR(1)}" onclick="changeDotPos(1)"
+                                   style="margin-right:20px;color: #FFC0CB;">
+                        <h:outputText value="ONE"/>
+                    </p:commandLink>
+                    <p:commandLink update="res-table,r" action="#{controller.setR(2)}" onclick="changeDotPos(2)"
+                                   style="margin-right:20px;color:#FFC0CB;">
+                        <h:outputText value="TWO"/>
+                    </p:commandLink>
+                    <p:commandLink update="res-table,r" action="#{controller.setR(3)}" onclick="changeDotPos(3)"
+                                   style="margin-right:20px;color:#FFC0CB;">
+                        <h:outputText value="THREE"/>
+                    </p:commandLink>
+                    <p:commandLink update="res-table,r" action="#{controller.setR(4)}" onclick="changeDotPos(4)"
+                                   style="margin-right:20px;color:#FFC0CB;">
+                        <h:outputText value="FOUR"/>
+                    </p:commandLink>
+                    <p:commandLink update="res-table,r" action="#{controller.setR(5)}" onclick="changeDotPos(5)"
+                                   style="margin-right:20px;color:#FFC0CB;">
+                        <h:outputText value="FIVE"/>
+                    </p:commandLink>
+
+                    <div class="form-label"><h:outputLabel>Y VALUE:</h:outputLabel></div>
+                    <div class="container">
+                        <h:panelGrid columns="1">
+                            <p:inputText id="y" readonly="false" value="#{controller.y}"/>
+                            <p:slider for="y" minValue="-4" maxValue="4" step="1" update="y"/>
+                        </h:panelGrid>
+                    </div>
+                    <div class="container" style="text-align: center;">
+                        <h:commandButton id="subm" prependId="false" update="res-table" style=" background: #27fac3" value="send"
+                                         action="#{controller.checkArea()}"/>
+                    </div>
+                    <div class="clear-button-container" style="text-align: center;">
+                        <h:commandButton update="res-table" style=" background: salmon" value="clear"
+                                         action="#{db.deleteAll}"/>
+                    </div>
+                </div>
+            </h:form>
+            <ui:include src="template/table.xhtml"/>
+        </ui:define>
+    </ui:composition>
+    <h:outputScript library="js" name="valid.js"/>
+    <h:outputScript library="js" name="plotChange.js"/>
+</h:body>
+</html>

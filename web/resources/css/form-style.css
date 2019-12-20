@@ -1,0 +1,49 @@
+form{
+    display: block;
+    width: 30vw;
+    min-width: 350px;
+    margin: 1% auto;
+    text-align: center;
+}
+form table{
+    margin: 0 auto;
+    background: none;
+}
+
+#error-message, #error-message-R {
+    color: #911c1c;
+    text-transform: uppercase;
+}
+
+input[type="text"] {
+    width: 150px;
+    transition: all .3s ease-in-out;
+    padding: 5px;
+    margin: 5px auto;
+    border: none;
+    border-bottom: 4px solid  #CDD1DA;
+    text-align: center;
+    font-size: 150%;
+    background: none;
+}
+
+
+input[type="text"]:hover, input[type="text"]:focus  {
+    border-bottom: 4px solid  #0B42A8;
+}
+
+input[type="submit"]{
+    transition: all .7s ease-in-out;
+    width: 80px;
+    height: 40px;
+    border-radius: 10px;
+    background: #008B8B;
+}
+
+input[type="submit"]:disabled {
+    background: dimgray;
+}
+
+.clear-button {
+    background: #D8BFD8;
+}
