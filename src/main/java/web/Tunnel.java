@@ -1,3 +1,5 @@
+package web;
+
 import com.jcraft.jsch.*;
 import netscape.javascript.JSException;
 
@@ -17,7 +19,7 @@ public class Tunnel {
     private int tunnelRemotePort;
 
     /**
-     * SSH Tunnel constructor
+     * SSH web.Tunnel constructor
      *
      * @param host             Target SSH host, which you will be connected     (example: "helios.se.ifmo.ru")
      * @param user             User on target SSH host                          (example: s244444)

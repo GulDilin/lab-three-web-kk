@@ -13,6 +13,10 @@
           <element id="library" level="project" name="jsch-0.1.55" />
           <element id="library" level="project" name="postgresql-42.2.5" />
           <element id="library" level="project" name="primefaces-6.0" />
+          <element id="library" level="project" name="javax.persistence-api-2.2" />
+          <element id="library" level="project" name="javax.persistence" />
+          <element id="library" level="project" name="hibernate" />
+          <element id="library" level="project" name="JPA 2.0-2.0" />
         </element>
       </element>
     </root>

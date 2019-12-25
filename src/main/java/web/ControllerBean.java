@@ -1,3 +1,5 @@
+package web;
+
 import javax.faces.bean.ApplicationScoped;
 import javax.faces.bean.ManagedBean;
 import javax.faces.context.FacesContext;
@@ -12,10 +14,10 @@ public class ControllerBean {
     private String r = "1";
     private String result = "";
 
-    private DataBaseManager manager = null;
+    private HiberDataBaseManager manager = null;
 
     public ControllerBean() {
-        manager = new DataBaseManager("studs", 5445);
+        manager = new HiberDataBaseManager();
     }
 
     public void checkArea() {

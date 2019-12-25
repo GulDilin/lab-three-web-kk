@@ -1,3 +1,5 @@
+package web;
+
 import com.jcraft.jsch.JSchException;
 
 import java.sql.*;

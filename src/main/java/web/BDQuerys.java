@@ -1,3 +1,5 @@
+package web;
+
 public enum BDQuerys {
     GET_ALL("SELECT * FROM dots"),
     DELETE_DOTS("DELETE FROM dots");

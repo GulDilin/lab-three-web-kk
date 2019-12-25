@@ -1,3 +1,5 @@
+package web;
+
 import javax.faces.bean.ApplicationScoped;
 import javax.faces.bean.ManagedBean;
 
@@ -5,12 +7,12 @@ import javax.faces.bean.ManagedBean;
 @ApplicationScoped
 public class DBBean {
 
-    private DataBaseManager manager = null;
+    private HiberDataBaseManager manager = null;
     private String resultAllDot;
     private String resultAllTable;
 
     public DBBean() {
-        manager = new DataBaseManager("studs", 8495);
+        manager = new HiberDataBaseManager();
     }
 
     public String getResultAllDot() {
@@ -37,7 +39,8 @@ public class DBBean {
             double x = Double.parseDouble(vals[0]);
             double y = Double.parseDouble(vals[1]);
             int r = Integer.getInteger(vals[2]);
-            return manager.addDot(x, y, r, "ну и срань");
+            manager.addDot(x, y, r, "false");
+            return true;
         } catch (NumberFormatException e) {
             return false;
         }

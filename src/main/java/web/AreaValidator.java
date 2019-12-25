@@ -1,3 +1,5 @@
+package web;
+
 public class AreaValidator {
 
     public static String checkArea(String x, String y, String r) {
